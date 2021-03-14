@@ -19,7 +19,7 @@ import com.jvm.isitpingable.model.ResponseStatus;
  * @author Saravanan Kalimuthu
  *
  */
-@Service
+
 public interface PingService {
 	
 	ResponseStatus checkAndPingGivenUrl(String urlString);

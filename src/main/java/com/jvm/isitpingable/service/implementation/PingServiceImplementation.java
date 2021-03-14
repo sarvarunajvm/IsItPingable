@@ -9,7 +9,7 @@
 * 
 */
 
-package com.jvm.isitpingable.service;
+package com.jvm.isitpingable.service.implementation;
 
 import java.net.HttpURLConnection;
 import java.net.URL;
@@ -18,12 +18,15 @@ import javax.net.ssl.HttpsURLConnection;
 
 import com.jvm.isitpingable.model.ResponseStatus;
 
+import com.jvm.isitpingable.service.PingService;
 import lombok.SneakyThrows;
+import org.springframework.stereotype.Service;
 
 /**
  * @author Saravanan Kalimuthu
  *
  */
+@Service(value = "pingService")
 public class PingServiceImplementation implements PingService {
 
 	@Override
@@ -40,7 +43,7 @@ public class PingServiceImplementation implements PingService {
 	}
 
 	/**
-	 * @param urlString
+	 * @param urlObj
 	 * @return
 	 */
 	@SneakyThrows
@@ -61,7 +64,7 @@ public class PingServiceImplementation implements PingService {
 	}
 
 	/**
-	 * @param urlString
+	 * @param urlObj
 	 * @return
 	 */
 	@SneakyThrows
